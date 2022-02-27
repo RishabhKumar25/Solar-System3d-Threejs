@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.main-container{
+  width: 100vw;
+  height: 100vh;
+}
+
+h2{
+  font-family: 'Mulish', sans-serif;
+  
+}
+.info{
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 3.5rem;
+  z-index: 100;
+  display:block;
+}
+.info-footer{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.5rem;
+  z-index: 100;
+  display:block;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .info{
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 100;
+  display:block;
+}
+
+}
+   </style>
+</head>
+<body>
+  
+    <div class="info">
+        <h2>3d - Solar System</h2>
+    </div>
+    <div class="main-container" id="canvasid">
+        <canvas></canvas>
+    </div>
+    <div class="info-footer">
+        <h2>Made By God with ❤️ </h2>
+    </div>
+    
+    <script type="module" src="main.js">
+        
+    </script>
+</body>
+</html>
