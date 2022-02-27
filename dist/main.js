@@ -37,59 +37,59 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/exampl
  
  // //Creating all the objects and setting their position in scene
   var geometry_s = new THREE.SphereGeometry(5000, 64,64);
-  var material_s = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('../images/galaxy_starfield.png'), side: THREE.DoubleSide});
+  var material_s = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('galaxy_starfield.png'), side: THREE.DoubleSide});
   var starfield = new THREE.Mesh (geometry_s, material_s);
   scene.add(starfield);
  
   var sun_geom = new THREE.SphereGeometry (170, 32, 32);
-  var sun_mat = new THREE.MeshBasicMaterial ({map : new THREE.TextureLoader().load('../images/sun_detailed.jpg'), side: THREE.DoubleSide});
+  var sun_mat = new THREE.MeshBasicMaterial ({map : new THREE.TextureLoader().load('sun_detailed.jpg'), side: THREE.DoubleSide});
   var sun = new THREE.Mesh (sun_geom, sun_mat);
   sun.position.set(0,0,0);
   scene.add(sun);
  
   var mer_geom = new THREE.SphereGeometry (30, 12, 12);
-  var mer_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('../images/mercury.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
+  var mer_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('mercury.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
   shininess: 25});
   var mer = new THREE.Mesh (mer_geom, mer_mat);
   mer.position.set(400,0,0);
   scene.add(mer);
  
   var ven_geom = new THREE.SphereGeometry (50, 24, 24);
-  var ven_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('../images/venus.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
+  var ven_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('venus.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
   shininess: 25});
   var ven = new THREE.Mesh (ven_geom, ven_mat);
   ven.position.set(600,0,0);
   scene.add(ven);
  
   var earth_geom = new THREE.SphereGeometry (60, 32, 32);
-  var earth_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('../images/earth_terrain_4k.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
+  var earth_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('earth_terrain_4k.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
   shininess: 25});
   var earth = new THREE.Mesh (earth_geom, earth_mat);
   earth.position.set(800,0,0);
   scene.add(earth);
  
   var geometry_m = new THREE.SphereGeometry (20 , 32 , 32);
-  var material_m = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('../images/moon_4k.jpg'), side: THREE.FrontSide, color: 0xaaaaaa, shininess:25});
+  var material_m = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('moon_4k.jpg'), side: THREE.FrontSide, color: 0xaaaaaa, shininess:25});
   var moon = new THREE.Mesh(geometry_m, material_m);
   moon.position.set(800,0,0);
   earth.add(moon);
  
   var mar_geom = new THREE.SphereGeometry (60, 32, 32);
-  var mar_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('../images/mars.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
+  var mar_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('mars.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
   shininess: 25});
   var mar = new THREE.Mesh (mar_geom, mar_mat);
   mar.position.set(1000,0,0);
   scene.add(mar);
  
   var jup_geom = new THREE.SphereGeometry (130, 64, 64);
-  var jup_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('../images/jupiter.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
+  var jup_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('jupiter.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
   shininess: 25});
   var jup = new THREE.Mesh (jup_geom, jup_mat);
   jup.position.set(1400,0,0);
   scene.add(jup);
  
   var sat_geom = new THREE.SphereGeometry (50, 32, 32);
-  var sat_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('../images/saturn.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
+  var sat_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('saturn.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
   shininess: 25});
   var sat= new THREE.Mesh (sat_geom, sat_mat);
   sat.position.set(1800,0,0);
@@ -102,7 +102,7 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/exampl
  //  sat.add(ring);
  
  var geometry_r = new THREE.RingGeometry( 80, 95, 62 );
- var texture_r = new THREE.TextureLoader().load( '../images/saturnring.jpg' );
+ var texture_r = new THREE.TextureLoader().load( 'saturnring.jpg' );
  var material_r = new THREE.MeshLambertMaterial( { side: THREE.DoubleSide, map: texture_r} );
  var ring = new THREE.Mesh( geometry_r, material_r );
  // ring.rotateOnWorldAxis( new THREE.Mesh( 1800, 0, 0 ), Math.PI/2 );
@@ -114,14 +114,14 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/exampl
  
  
   var ura_geom = new THREE.SphereGeometry (85, 32, 32);
-  var ura_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('../images/uranus.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
+  var ura_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('uranus.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
   shininess: 25});
   var ura = new THREE.Mesh (ura_geom, ura_mat);
   ura.position.set(2200,0,0);
   scene.add(ura);
  
   var nep_geom = new THREE.SphereGeometry (90, 32, 32);
-  var nep_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('../images/neptune.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
+  var nep_mat = new THREE.MeshPhongMaterial ({map : new THREE.TextureLoader().load('neptune.jpg'), side: THREE.DoubleSide, color: 0xaaaaaa,
   shininess: 25});
   var nep = new THREE.Mesh (nep_geom, nep_mat);
   nep.position.set(3200,0,0);
